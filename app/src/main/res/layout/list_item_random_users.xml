@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.infinite.randomusers.viewmodel.HomeViewModel" />
+
+        <variable
+            name="user"
+            type="com.infinite.randomusers.model.User" />
+
+    </data>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="@dimen/margin_8dp"
+            android:outlineAmbientShadowColor="@color/light_grey_depth"
+            android:elevation="0dp"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/margin_8dp"
+                android:layout_height="wrap_content">
+
+                <com.infinite.randomusers.cusomview.CircleImageView
+                    android:id="@+id/img_user"
+                    imageUrl="@{user.picture.thumbnail}"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:layout_marginBottom="@dimen/margin_8dp"
+                    app:civ_border_color="@color/light_grey_depth"
+                    app:civ_border_width="4dp"
+                    tools:src="@tools:sample/avatars" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="left"
+                    android:layout_marginTop="@dimen/margin_8dp"
+                    android:layout_toStartOf="@id/img_nav_arrow"
+                    android:layout_toEndOf="@id/img_user"
+                    android:ellipsize="end"
+                    android:text="@{viewModel.formattedName(user)}"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="@tools:sample/full_names" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_view_user_name"
+                    android:layout_marginStart="8dp"
+                    android:layout_toStartOf="@id/img_nav_arrow"
+                    android:layout_toEndOf="@id/img_user"
+                    android:text="@{user.email}"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp"
+                    tools:text="sathishkumarkind@gmail.com" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_view_email"
+                    android:layout_marginStart="8dp"
+                    android:layout_toStartOf="@id/img_nav_arrow"
+                    android:layout_toEndOf="@id/img_user"
+                    android:text="@{user.phone}"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp"
+                    tools:text="@tools:sample/us_phones" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_nav_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_8dp"
+                    android:layout_marginEnd="@dimen/margin_4dp"
+                    android:src="@drawable/ic_arrow_right" />
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</layout>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item>
+
+        <shape android:shape="rectangle">
+<!--           <solid android:color="@color/colorGreenSemiTransparent"/>-->
+
+            <gradient
+                android:type="linear"
+                android:startColor="@color/pinkBadge"
+                android:endColor="@color/pinkBadge"
+                android:angle="90"
+                />
+            <!--apply a border around button-->
+            <!--            <stroke android:color="#006400" android:width="2dp" />-->
+            <!-- make the button corners rounded-->
+            <corners android:radius="24dp"/>
+        </shape>
+
+    </item>
+
+
+
+</selector>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1AE4CC</color>
+    <color name="colorPrimaryDark">#04AEB7</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#393939</color>
+    <color name="light_grey">#858582</color>
+    <color name="light_grey_depth">#F3F3F3</color>
+
+    <color name="toolbar_gradient_end">#04B2BA</color>
+    <color name="pinkBadge">#E70570</color>
+
+</resources>
