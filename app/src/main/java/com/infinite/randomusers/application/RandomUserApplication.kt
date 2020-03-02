@@ -13,6 +13,7 @@ class RandomUserApplication: Application() {
 
     /**
      * Method helps in testing the application. Override this method to provide app component for testing
+     * Keeping it open modifier, since under testing we will use it
      */
     open fun initializeComponent(): AppComponent {
         return DaggerAppComponent.factory().create(NetworkModule())

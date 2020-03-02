@@ -2,7 +2,6 @@ package com.infinite.randomusers.utils
 
 import android.annotation.SuppressLint
 import android.util.Log
-import java.lang.Exception
 import java.text.SimpleDateFormat
 
 @SuppressLint("SimpleDateFormat")

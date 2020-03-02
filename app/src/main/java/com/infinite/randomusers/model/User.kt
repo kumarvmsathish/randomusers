@@ -2,7 +2,6 @@ package com.infinite.randomusers.model
 
 
 import android.os.Parcelable
-import com.infinite.randomusers.utils.formatDate
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 import kotlinx.android.parcel.Parcelize

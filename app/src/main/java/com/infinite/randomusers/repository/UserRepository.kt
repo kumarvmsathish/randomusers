@@ -1,8 +1,8 @@
 package com.infinite.randomusers.repository
 
 import com.infinite.randomusers.di.HomeScope
-import com.infinite.randomusers.network.RemoteDataSource
 import com.infinite.randomusers.model.User
+import com.infinite.randomusers.network.RemoteDataSource
 import javax.inject.Inject
 
 @HomeScope

@@ -165,7 +165,7 @@ class CircleImageView : AppCompatImageView {
                 return
             }
             mBorderColor = borderColor
-            mBorderPaint.setColor(mBorderColor)
+            mBorderPaint.color = mBorderColor
             invalidate()
         }
 
@@ -176,7 +176,7 @@ class CircleImageView : AppCompatImageView {
                 return
             }
             mCircleBackgroundColor = circleBackgroundColor
-            mCircleBackgroundPaint.setColor(circleBackgroundColor)
+            mCircleBackgroundPaint.color = circleBackgroundColor
             invalidate()
         }
 
@@ -250,7 +250,7 @@ class CircleImageView : AppCompatImageView {
     private fun applyColorFilter() { // This might be called from setColorFilter during ImageView construction
 // before member initialization has finished on API level <= 19.
         if (mBitmapPaint != null) {
-            mBitmapPaint.setColorFilter(mColorFilter)
+            mBitmapPaint.colorFilter = mColorFilter
         }
     }
 
@@ -307,15 +307,15 @@ class CircleImageView : AppCompatImageView {
             return
         }
         mBitmapShader = BitmapShader(mBitmap!!, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP)
-        mBitmapPaint?.setAntiAlias(true)
-        mBitmapPaint?.setShader(mBitmapShader)
-        mBorderPaint.setStyle(Paint.Style.STROKE)
-        mBorderPaint.setAntiAlias(true)
-        mBorderPaint.setColor(mBorderColor)
-        mBorderPaint.setStrokeWidth(mBorderWidth.toFloat())
-        mCircleBackgroundPaint.setStyle(Paint.Style.FILL)
-        mCircleBackgroundPaint.setAntiAlias(true)
-        mCircleBackgroundPaint.setColor(mCircleBackgroundColor)
+        mBitmapPaint?.isAntiAlias = true
+        mBitmapPaint?.shader = mBitmapShader
+        mBorderPaint.style = Paint.Style.STROKE
+        mBorderPaint.isAntiAlias = true
+        mBorderPaint.color = mBorderColor
+        mBorderPaint.strokeWidth = mBorderWidth.toFloat()
+        mCircleBackgroundPaint.style = Paint.Style.FILL
+        mCircleBackgroundPaint.isAntiAlias = true
+        mCircleBackgroundPaint.color = mCircleBackgroundColor
         mBitmapHeight = mBitmap!!.height
         mBitmapWidth = mBitmap!!.width
         mBorderRect.set(calculateBounds())

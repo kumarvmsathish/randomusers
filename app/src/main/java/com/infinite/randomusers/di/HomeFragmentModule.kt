@@ -5,7 +5,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class HomeFragmentModule constructor(val homeFragment: HomeFragment) {
+class HomeFragmentModule constructor(private val homeFragment: HomeFragment) {
 
 
     @Provides

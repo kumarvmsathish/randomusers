@@ -15,8 +15,8 @@ import com.infinite.randomusers.adapter.VerticalSpaceItemDecoration
 import com.infinite.randomusers.application.RandomUserApplication
 import com.infinite.randomusers.databinding.FragmentHomeBinding
 import com.infinite.randomusers.interfaces.IListItemClickListener
-import com.infinite.randomusers.network.RemoteDataSource
 import com.infinite.randomusers.model.User
+import com.infinite.randomusers.network.RemoteDataSource
 import com.infinite.randomusers.repository.UserRepository
 import com.infinite.randomusers.utils.setupSnackBar
 import com.infinite.randomusers.viewmodel.HomeViewModel
