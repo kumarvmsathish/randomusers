@@ -31,14 +31,15 @@ class HomeFragment: Fragment(), IListItemClickListener {
     private val lastVisibleItemPosition: Int
         get() = layoutManager.findLastVisibleItemPosition()
 
-    @Inject
-    lateinit var remoteDataSource: RemoteDataSource
+//    @Inject
+//    lateinit var remoteDataSource: RemoteDataSource
+//
+//    @Inject
+//    lateinit var userRepository: UserRepository
+//
 
     @Inject
-    lateinit var userRepository: UserRepository
-
-    @Inject
-    lateinit var homeViewModelFactory: HomeViewModelFactory
+   lateinit var homeViewModelFactory: HomeViewModelFactory
 
     private lateinit var homeViewModel: HomeViewModel
 
